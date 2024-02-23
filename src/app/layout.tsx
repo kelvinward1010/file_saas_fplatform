@@ -17,11 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light" suppressContentEditableWarning>
-      <body className={cn(
-        'min-h-screen font-sans antialiased grainy',
-        inter.className
-      )}>
+    <html lang="en" className="light" suppressContentEditableWarning={true} suppressHydrationWarning={true}>
+      <body 
+        className={cn(
+          'min-h-screen font-sans antialiased grainy',
+          inter.className
+        )}
+        suppressContentEditableWarning={true}
+        suppressHydrationWarning={true}
+      >
         <Navbar />
         {children}
       </body>
