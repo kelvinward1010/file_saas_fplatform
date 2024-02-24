@@ -7,7 +7,7 @@ function DashBoardPage() {
     const user = getUser();
 
     if(!user){
-        return redirect('/')
+        return redirect('/auth-callback?origin=dashboard')
     }
     
     return (
